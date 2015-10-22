@@ -1,5 +1,7 @@
 package com.money.view;
 
+import org.springframework.web.servlet.View;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;
@@ -21,11 +23,24 @@ public class WrapperResponseUtil {
 		return wrapperResponseUtil;
 	}
 
-	public String getHTML(JspView jspView, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
-		if (jspView != null) {
+//	public String getHTML(JspView jspView, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
+//		if (jspView != null) {
+//			WrapperResponse wrapperResponse = new WrapperResponse(response);
+//			try {
+//				jspView.render(model, request, wrapperResponse);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//				return null;
+//			}
+//			return wrapperResponse.getHTML();
+//		}
+//		return null;
+//	}
+	public String getHTML(View view, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
+		if (view != null) {
 			WrapperResponse wrapperResponse = new WrapperResponse(response);
 			try {
-				jspView.render(model, request, wrapperResponse);
+				view.render(model, request, wrapperResponse);
 			} catch (Exception e) {
 				e.printStackTrace();
 				return null;
