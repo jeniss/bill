@@ -35,7 +35,6 @@ public class JspView extends AbstractView {
 			jspFile = prefixPath + url.substring(0, url.lastIndexOf(".")) + ".jsp";
 		}
 		response.setContentType("text/html;charset=UTF-8");
-		request.getRequestDispatcher(RESOURCE_BUNDLE_JSP).include(request, response);
 		request.getRequestDispatcher(jspFile).forward(request, response);
 	}
 

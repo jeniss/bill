@@ -23,24 +23,11 @@ public class WrapperResponseUtil {
 		return wrapperResponseUtil;
 	}
 
-//	public String getHTML(JspView jspView, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
-//		if (jspView != null) {
-//			WrapperResponse wrapperResponse = new WrapperResponse(response);
-//			try {
-//				jspView.render(model, request, wrapperResponse);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//				return null;
-//			}
-//			return wrapperResponse.getHTML();
-//		}
-//		return null;
-//	}
-	public String getHTML(View view, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
-		if (view != null) {
+	public String getHTML(JspView jspView, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
+		if (jspView != null) {
 			WrapperResponse wrapperResponse = new WrapperResponse(response);
 			try {
-				view.render(model, request, wrapperResponse);
+				jspView.render(model, request, wrapperResponse);
 			} catch (Exception e) {
 				e.printStackTrace();
 				return null;
@@ -49,6 +36,19 @@ public class WrapperResponseUtil {
 		}
 		return null;
 	}
+//	public String getHTML(View view, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
+//		if (view != null) {
+//			WrapperResponse wrapperResponse = new WrapperResponse(response);
+//			try {
+//				view.render(model, request, wrapperResponse);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//				return null;
+//			}
+//			return wrapperResponse.getHTML();
+//		}
+//		return null;
+//	}
 
 	private class WrapperResponse extends HttpServletResponseWrapper {
 		private CharArrayWriter charArrayWriter;
