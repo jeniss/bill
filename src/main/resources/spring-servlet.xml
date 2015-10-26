@@ -13,25 +13,10 @@
     <!-- 扫描com这个包里的所有类，把里面配上相应注解的类全都放在容器中进行管理 -->
     <context:component-scan base-package="com.money"/>
 
+    <mvc:annotation-driven/>
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
-    <mvc:annotation-driven>
-        <mvc:message-converters register-defaults="false">
-            <bean
-                    class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
-            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
-                <property name="supportedMediaTypes" value="text/plain;charset=UTF-8"/>
-            </bean>
-            <bean
-                    class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
-                <property name="supportedMediaTypes" value="text/plain;charset=UTF-8"/>
-            </bean>
-        </mvc:message-converters>
-    </mvc:annotation-driven>
-
-
 </beans>
