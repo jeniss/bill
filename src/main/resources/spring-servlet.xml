@@ -11,11 +11,10 @@
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
     <!-- 扫描com这个包里的所有类，把里面配上相应注解的类全都放在容器中进行管理 -->
-    <context:component-scan base-package="com.money"/>
+    <context:component-scan base-package="com.money.controller, com.money.service"/>
 
     <mvc:annotation-driven/>
-    <bean
-            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp"/>
         <property name="suffix" value=".jsp"/>
     </bean>

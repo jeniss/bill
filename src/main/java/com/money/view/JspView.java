@@ -12,7 +12,6 @@ import java.util.Map;
 public class JspView extends AbstractView {
 
 	public static final String JSP_FILE_ROOT = "/WEB-INF/jsp";
-	public static final String RESOURCE_BUNDLE_JSP = "/WEB-INF/jsp/resourceBundle.jsp";
 	protected String prefixPath = JSP_FILE_ROOT;
 	protected String filePath;
 	private static JspView instance = new JspView();

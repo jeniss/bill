@@ -78,15 +78,17 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <!-- spring end -->
-
-        <!-- json end -->
         <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20131018</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.version}</version>
         </dependency>
-        <!-- json end -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- spring end -->
 
         <!-- jackson begin -->
         <dependency>
@@ -163,12 +165,8 @@
         </dependency>
     </dependencies>
     <build>
+        <directory>D:\IdeaWorkspace\test\out\bill</directory>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -178,7 +176,16 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <warName>bill</warName>
+                    <outputDirectory>D:\IdeaWorkspace\test\out\artifacts\bill</outputDirectory>
+                </configuration>
+            </plugin>
         </plugins>
-        <finalName>taaas</finalName>
+        <finalName>bill</finalName>
     </build>
 </project>

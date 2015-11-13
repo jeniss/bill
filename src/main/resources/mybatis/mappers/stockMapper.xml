@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.money.mapper.IStockMapper">
+    <resultMap id="rStock" type="com.money.po.Stock">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="code" column="code"/>
+        <result property="name" column="name"/>
+        <result property="entryDatetime" column="entry_datetime"/>
+        <result property="updateDatetime" column="update_datetime"/>
+        <result property="soldAll" column="sold_all"/>
+        <result property="profit" column="profit"/>
+        <result property="note" column="note"/>
+    </resultMap>
+
+    <insert id="insertStock" parameterType="com.money.po.Stock">
+        INSERT INTO stock(user_id, code, name, entry_datetime)
+        VALUES (#{userId}, #{code}, #{name}, #{entryDatetime})
+    </insert>
+</mapper>
