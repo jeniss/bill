@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * Created by jennifert on 2015/11/12.
  */
-@Controller
 @RequestMapping(value = "stock")
 public class StockController {
 	@Autowired

@@ -55,6 +55,7 @@
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
+    <!-- 自动生成MapperFactoryBean,使用SqlSessionDaoSupport或者SqlSessionTemplate编写数据访问对象（DAO）的代码 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.money.mapper"/>
     </bean>

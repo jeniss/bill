@@ -5,6 +5,6 @@ import com.money.po.Stock;
 /**
  * Created by jennifert on 2015/11/12.
  */
-public interface IStockMapper {
+public interface StockMapper {
 	public void insertStock(Stock stock);
 }
