@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Date;
+
 /**
  * Created by jennifert on 2015/11/12.
  */
@@ -22,6 +24,7 @@ public class StockController {
 	@RequestMapping(value = "addStock.do")
 	@ResponseBody
 	public String insertStock(Stock stock) {
+		stock.setEntryDatetime(new Date());
 		stockService.insertStock(stock);
 		return null;
 	}

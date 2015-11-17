@@ -19,5 +19,6 @@ public class StockServiceImpl implements IStockService {
 	public void insertStock(Stock stock){
 		stockMapper.insertStock(stock);
 //		Integer.parseInt("adsd");
+//		throw new RuntimeException("Error");
 	}
 }
