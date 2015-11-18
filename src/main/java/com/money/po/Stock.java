@@ -1,5 +1,8 @@
 package com.money.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -48,6 +51,7 @@ public class Stock {
 		this.name = name;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getEntryDatetime() {
 		return entryDatetime;
 	}
@@ -56,6 +60,7 @@ public class Stock {
 		this.entryDatetime = entryDatetime;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getUpdateDatetime() {
 		return updateDatetime;
 	}

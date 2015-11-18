@@ -1,6 +1,6 @@
-package com.money.view;
+package com.money.util.view;
 
-import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.view.JstlView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,19 +36,6 @@ public class WrapperResponseUtil {
 		}
 		return null;
 	}
-//	public String getHTML(View view, HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
-//		if (view != null) {
-//			WrapperResponse wrapperResponse = new WrapperResponse(response);
-//			try {
-//				view.render(model, request, wrapperResponse);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//				return null;
-//			}
-//			return wrapperResponse.getHTML();
-//		}
-//		return null;
-//	}
 
 	private class WrapperResponse extends HttpServletResponseWrapper {
 		private CharArrayWriter charArrayWriter;

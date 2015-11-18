@@ -1,6 +1,7 @@
-package com.money.view;
+package com.money.util.view;
 
 import org.springframework.web.servlet.view.AbstractView;
+import org.springframework.web.servlet.view.JstlView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,7 +10,7 @@ import java.util.Map;
 /**
  * Created by jennifert on 2015/10/21.
  */
-public class JspView extends AbstractView {
+public class JspView extends JstlView {
 
 	public static final String JSP_FILE_ROOT = "/WEB-INF/jsp";
 	protected String prefixPath = JSP_FILE_ROOT;

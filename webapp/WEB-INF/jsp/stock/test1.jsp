@@ -32,21 +32,5 @@
 <body>
 hahhaha111111111: ${content}
 
-<div class="l-u">
-    <div class="img-container">
-        <img src="<c:url value="/resources/images/Lighthouse.jpg" />">
-    </div>
-</div>
-<script src="<c:url value='/resources/script/command.js'/>" type="text/javascript"></script>
-<script type="text/javascript">
-    window.onload = function () {
-        var imgContainer = document.querySelectorAll('.img-container');
-        for (var i in imgContainer) {
-            if (i < imgContainer.length) {
-                imageAdapt(imgContainer[i]);
-            }
-        }
-    }
-</script>
 </body>
 </html>

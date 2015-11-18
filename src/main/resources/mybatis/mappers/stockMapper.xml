@@ -14,7 +14,7 @@
     </resultMap>
 
     <insert id="insertStock" parameterType="com.money.po.Stock">
-        INSERT INTO stock(user_id, code, name, entry_datetime)
-        VALUES (#{userId}, #{code}, #{name}, #{entryDatetime})
+        INSERT INTO stock(user_id, code, name, entry_datetime, update_datetime)
+        VALUES (#{userId}, #{code}, #{name}, #{entryDatetime}, #{updateDatetime})
     </insert>
 </mapper>
